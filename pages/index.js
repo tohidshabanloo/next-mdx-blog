@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
 import Post from "../components/Post";
-import {sortByDate} from '../utils'
+import { sortByDate } from "../utils";
 
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
@@ -19,9 +19,7 @@ export default function Home({ posts }) {
       </Head>
       <div className="posts">
         {posts.map((post, index) => (
-          <div key={index}>
-            <Post post={post} />
-          </div>
+          <Post key={index} post={post} />
         ))}
       </div>
     </div>
