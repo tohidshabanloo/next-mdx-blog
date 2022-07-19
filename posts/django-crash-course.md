@@ -1,5 +1,5 @@
 ---
-title: "Django Crash Course"
+title: "اولین پست"
 date: "March 5, 2021"
 athour: "Tohid Shabanloo"
 excerpt: "Django is a very powerful, high level Python framework for building web applications"
