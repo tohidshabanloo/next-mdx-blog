@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
 import Post from "../components/Post";
+import {sortByDate} from '../utils'
 
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
@@ -49,7 +50,7 @@ export async function getStaticProps() {
   console.log(posts);
   return {
     props: {
-      posts: posts,
+      posts: posts.sort(sortByDate),
     },
   };
 }
