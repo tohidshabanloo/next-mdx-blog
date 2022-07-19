@@ -30,6 +30,19 @@ header {
   color: #fff;
   padding: 5px;
   margin-bottom: 40px;
+  cursor: pointer;
+}
+
+footer {
+  background: steelblue;
+  color: #fff;
+  padding: 15px;
+}
+.footer {
+  cursor: pointer;
+}
+.footer:hover {
+  color: rgb(10, 10, 10);
 }
 
 header a {
@@ -81,6 +94,10 @@ header a {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.card:hover {
+  background: rgba(70, 131, 180, 0.096);
 }
 
 .card-page {
@@ -92,7 +109,7 @@ header a {
 }
 
 .post-date {
-  background: #f4f4f4;
+  /* background: #f4f4f4; */
   margin-bottom: 20px;
   padding: 3px 10px;
 }
