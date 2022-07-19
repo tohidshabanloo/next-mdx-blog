@@ -4,13 +4,13 @@ import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div dir="rtl">
       <Header />
       <main className="container">
         <Component {...pageProps} />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
