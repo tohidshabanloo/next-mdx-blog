@@ -12,11 +12,11 @@ export default function PostPage({
   return (
     <>
       <Link href="/">
-        <a className="btn btn-back">Go Back</a>
+        <a className="btn btn-back">بازگشت</a>
       </Link>
       <div className="card card-page">
         <h1 className="post-title">{title}</h1>
-        <div className="post-date">Posted on {date}</div>
+        <div className="post-date">در تاریخ {date}</div>
         <img src={cover_image} alt="" />
         <div className="post-body">
           <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
