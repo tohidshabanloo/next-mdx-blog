@@ -110,7 +110,10 @@ header a {
   gap: 20px;
   margin-top: 30px;
 }
-
+.image-container {
+  background: rgba(70, 131, 180, 0.466);
+  
+}
 .card {
   padding: 15px;
   border-radius: 10px;
