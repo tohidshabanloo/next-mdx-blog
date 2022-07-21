@@ -5,7 +5,7 @@ import { marked } from "marked";
 import Link from "next/link";
 
 export default function PostPage({
-  frontmatter: { title, date, cover_image },
+  frontmatter: { title, date, cover_image, athour, translator },
   slug,
   content,
 }) {
@@ -16,8 +16,14 @@ export default function PostPage({
       </Link>
       <div className="card card-page">
         <h1 className="post-title">{title}</h1>
-        <div className="post-date">در تاریخ {date}</div>
-        <img src={cover_image} alt="" />
+        <img className="image-in-post" src={cover_image} alt="" />
+        <div className="info">
+          {" "}
+          <div className="post-date"> اثری از: {athour}</div>
+          <div className="post-date">مترجم : {translator}</div>
+        </div>
+
+        {/* <div className="post-date">در تاریخ {date}</div> */}
         <div className="post-body">
           <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>

@@ -71,7 +71,7 @@ header a {
 }
 
 .container {
-  max-width: 768px;
+  max-width: 968px;
   margin: auto;
   overflow: auto;
   padding: 0 10px;
@@ -110,10 +110,7 @@ header a {
   gap: 20px;
   margin-top: 30px;
 }
-.image-container {
-  background: rgba(70, 131, 180, 0.466);
-  
-}
+
 .card {
   padding: 15px;
   border-radius: 10px;
@@ -157,24 +154,47 @@ ol {
   margin: 20px 0;
   line-height: 2.3;
 }
+
 @media (min-width: 700px) {
   .posts {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .image-in-post {
+    max-width: 200px;
+    max-height: 400px;
+    display: flex;
+    margin: auto;
   }
 }
 @media (max-width: 700px) {
   .posts {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .image-in-post {
+    max-width: 200px;
+    max-height: 400px;
+    display: flex;
+    margin: auto;
   }
 }
 @media (max-width: 500px) {
   .posts {
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
   }
   .img {
     display: flex;
     margin: auto;
+    padding-top: 20px;
     max-width: 200px;
     max-height: 400px;
+  }
+  .image-container {
+    background: steelblue;
+  }
+  .image-in-post {
+    max-width: 200px;
+    max-height: 400px;
+    display: flex;
+    margin: auto;
   }
 }
