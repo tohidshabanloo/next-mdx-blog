@@ -1,19 +1,12 @@
 export const navLinks = [
-  { name: "خانه", path: "/" },
+  { name: "صفحه اصلی", path: "/" },
   {
     name: "درباره ما",
     path: "/about",
   },
-  {
-    name: "خدمات",
-    path: "/services",
-  },
-  {
-    name: "وبلاگ",
-    path: "/blog",
-  },
+
   {
     name: "تماس با ما",
-    path: "#contact",
+    path: "/contact",
   },
 ];

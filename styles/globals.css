@@ -38,12 +38,18 @@ header {
   gap: 10px;
   margin-top: 20px;
   justify-content: center;
+  
 }
 .every-nav {
   border-radius: 5px;
   background-color: white;
   color: black;
   padding: 2px 10px;
+}
+.every-nav:hover {
+  background: rgba(50, 155, 241, 0.788);
+  color: #fff;
+  
 }
 
 footer {
