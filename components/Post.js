@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Post({ post }) {
   return (
     <Link href={`/blog/${post.slug}`}>
-      <div className="card">
+      <div className="card-index">
         <div className="image-container">
           <img className="img" src={post.frontmatter.cover_image} alt="" />
         </div>
