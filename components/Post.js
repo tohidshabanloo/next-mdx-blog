@@ -10,12 +10,12 @@ export default function Post({ post }) {
         <div className="post-date">
           <h3>{post.frontmatter.title}</h3>
           <h4>اثر : {post.frontmatter.athour} </h4>
-          <h4>مترجم :{post.frontmatter.translator} </h4>
+          {/* <h4>مترجم :{post.frontmatter.translator} </h4> */}
         </div>
-        <p>{post.frontmatter.excerpt}</p>
-        <div className="post-date">
-          {/* <div>سال انتشار: {post.frontmatter.date}</div> */}
-        </div>
+        {/* <p>{post.frontmatter.excerpt}</p> */}
+        {/* <div className="post-date">
+          <div>سال انتشار: {post.frontmatter.date}</div>
+        </div> */}
       </div>
     </Link>
   );
