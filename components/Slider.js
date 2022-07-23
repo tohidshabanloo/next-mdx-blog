@@ -7,12 +7,13 @@ import Post from "./Post";
 import Link from "next/link";
 
 const defaultOptions = {
-  spaceBetween: 1,
+  spaceBetween: 0,
   slidesPerView: 4.3,
 };
+
 const Slider = ({ posts, option = defaultOptions }) => {
   return (
-    <div>
+    <div className="swiperContainer">
       <Swiper
         spaceBetween={option.spaceBetween}
         slidesPerView={option.slidesPerView}
@@ -23,11 +24,11 @@ const Slider = ({ posts, option = defaultOptions }) => {
         {" "}
         <div className="posts">
           {posts.map((post, index) => (
-              <Link  key={index} href={`/blog/${post.slug}`}>
-                  <SwiperSlide>
-                <Post  key={index} post={post}/>
-            </SwiperSlide>
-              </Link>
+            <Link key={index} href={`/blog/${post.slug}`}>
+              <SwiperSlide>
+                <Post key={index} post={post} />
+              </SwiperSlide>
+            </Link>
           ))}
         </div>
       </Swiper>

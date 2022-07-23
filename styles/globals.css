@@ -49,10 +49,6 @@ header {
   background: rgba(50, 155, 241, 0.788);
   color: #fff;
 }
-.slider {
-  /* width: 50%;
-  height: 50%; */
-}
 
 footer {
   background: steelblue;
@@ -222,4 +218,5 @@ ol {
     display: flex;
     margin: auto;
   }
+
 }
