@@ -4,19 +4,19 @@ import Footer from "../components/Footer";
 import "../styles/font.css";
 
 import { MantineProvider, ColorSchemeProvider } from "@mantine/core";
-import { useColorScheme } from "@mantine/hooks";
+
 import { useState } from "react";
-import { getCookie, setCookies } from "cookies-next";
+import { getCookie, setCookie, setCookies } from "cookies-next";
 
 export default function App(props) {
   const { Component, pageProps } = props;
-  const [colorScheme, setColorScheme] = useState(props.ColorScheme);
+  const [colorScheme, setColorScheme] = useState(props.colorScheme);
 
   const toggleColorScheme = (value) => {
     const nextColorScheme =
       value || (colorScheme === "dark" ? "light" : "dark");
     setColorScheme(nextColorScheme);
-    setCookies("maintine-color-scheme", nextColorScheme, {
+    setCookies("mantine-color-scheme", nextColorScheme, {
       maxAge: 60 * 60 * 24 * 30,
     });
   };
@@ -43,6 +43,10 @@ export default function App(props) {
   );
 }
 
-App.getInitialProps = ({ ctx }) => ({
-  colorScheme: getCookie("maintine-color-scheme", ctx) || " n",
+App.getServerSideProps = ({ ctx }) => ({
+  colorScheme: getCookie("mantine-color-scheme", ctx) || "n ",
 });
+
+// App.getInitialProps = ({ ctx }) => ({
+//   colorScheme: getCookie("maintine-color-scheme", ctx) || " n",
+// });
