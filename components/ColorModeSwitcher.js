@@ -2,6 +2,7 @@ import React from "react";
 import { ActionIcon, Group, useMantineColorScheme } from "@mantine/core";
 import { Sun, Moon } from "tabler-icons-react";
 
+
 export function ColorModeSwitcher() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   return (

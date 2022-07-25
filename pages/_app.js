@@ -6,14 +6,20 @@ import "../styles/font.css";
 import { MantineProvider, ColorSchemeProvider } from "@mantine/core";
 import { useColorScheme } from "@mantine/hooks";
 import { useState } from "react";
+import { getCookie, setCookies } from "cookies-next";
 
-function MyApp(props) {
+export default function App(props) {
   const { Component, pageProps } = props;
-  const preferredColorScheme = useColorScheme();
-  const [colorScheme, setColorScheme] = useState(preferredColorScheme);
+  const [colorScheme, setColorScheme] = useState(props.ColorScheme);
 
-  const toggleColorScheme = (value) =>
-    setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
+  const toggleColorScheme = (value) => {
+    const nextColorScheme =
+      value || (colorScheme === "dark" ? "light" : "dark");
+    setColorScheme(nextColorScheme);
+    setCookies("maintine-color-scheme", nextColorScheme, {
+      maxAge: 60 * 60 * 24 * 30,
+    });
+  };
 
   return (
     <div dir="rtl">
@@ -37,4 +43,6 @@ function MyApp(props) {
   );
 }
 
-export default MyApp;
+App.getInitialProps = ({ ctx }) => ({
+  colorScheme: getCookie("maintine-color-scheme", ctx) || " n",
+});
