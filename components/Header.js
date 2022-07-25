@@ -13,18 +13,18 @@ export default function Header() {
         <nav className="nav">
           {navLinks.map((link, index) => {
             return (
-              <>
-                <div className="every-nav" key={index}>
-                  <Link href={link.path}>
-                    <div key={index}>{link.name}</div>
-                  </Link>
-                </div>
-              </>
+              <div className="every-nav" key={index}>
+                <Link href={link.path}>
+                  <div key={index}>{link.name}</div>
+                </Link>
+              </div>
             );
           })}
+          <div className="switcher">
+            <ColorModeSwitcher />
+          </div>
         </nav>
       </div>
-      <ColorModeSwitcher />
     </header>
   );
 }

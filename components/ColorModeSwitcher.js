@@ -20,7 +20,7 @@ export function ColorModeSwitcher() {
               : theme.colors.blue[6],
         })}
       >
-        {colorScheme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+        {colorScheme === "dark" ? <Sun size={30} /> : <Moon size={30} />}
       </ActionIcon>
     </Group>
   );
