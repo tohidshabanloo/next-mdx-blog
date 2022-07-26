@@ -7,6 +7,7 @@ import New from "../components/New";
 import Slider from "../components/Slider";
 import { sortByDate } from "../utils";
 import NewSlider from "../components/NewSlider";
+import Box from "../components/Box";
 
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
@@ -46,6 +47,15 @@ export default function Home({ posts, news }) {
           <New key={index} new={post} />
         ))}
       </div> */}
+      <br />
+      <br />
+      <hr />
+      <br />
+      <div>
+        {posts.map((post, index) => (
+          <Box key={index} post={post} />
+        ))}
+      </div>
     </div>
   );
 }
