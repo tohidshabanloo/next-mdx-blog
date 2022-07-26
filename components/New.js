@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Post({ post }) {
+export default function New({ post }) {
   return (
-    <Link href={`/blog/posts/${post.slug}`}>
+    <Link href={`/blog/news/${post.slug}`}>
       <div className="card-index">
         <div className="image-container">
           <img className="img" src={post.frontmatter.cover_image} alt="" />

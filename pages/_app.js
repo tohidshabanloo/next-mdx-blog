@@ -16,7 +16,7 @@ export default function App(props) {
     const nextColorScheme =
       value || (colorScheme === "dark" ? "light" : "dark");
     setColorScheme(nextColorScheme);
-    setCookies("mantine-color-scheme", nextColorScheme, {
+    setCookies("switcher-color", nextColorScheme, {
       maxAge: 60 * 60 * 24 * 30,
     });
   };
@@ -44,7 +44,7 @@ export default function App(props) {
 }
 
 App.getServerSideProps = ({ ctx }) => ({
-  colorScheme: getCookie("mantine-color-scheme", ctx) || "n ",
+  colorScheme: getCookie("switcher-color", ctx) || "n ",
 });
 
 // App.getInitialProps = ({ ctx }) => ({

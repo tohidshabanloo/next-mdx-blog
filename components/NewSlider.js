@@ -12,7 +12,7 @@ const defaultOptions = {
   slidesPerView: 4.3,
 };
 
-const Slider = ({ posts, option = defaultOptions }) => {
+const NewSlider = ({ news, option = defaultOptions }) => {
   return (
     <div className="swiperContainer">
       <Swiper
@@ -24,10 +24,10 @@ const Slider = ({ posts, option = defaultOptions }) => {
       >
         {" "}
         <div className="posts">
-          {posts.map((post, index) => (
+          {news.map((post, index) => (
             <Link key={index} href={`/blog/${post.slug}`}>
               <SwiperSlide>
-                <Post key={index} post={post} />
+                <New key={index} post={post} />
               </SwiperSlide>
             </Link>
           ))}
@@ -37,4 +37,4 @@ const Slider = ({ posts, option = defaultOptions }) => {
   );
 };
 
-export default Slider;
+export default NewSlider;
