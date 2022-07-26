@@ -5,20 +5,33 @@ import "swiper/css/pagination";
 import { Navigation } from "swiper";
 import Post from "./Post";
 import Link from "next/link";
-import New from "./New";
+import "swiper/css/bundle";
 
-const defaultOptions = {
-  spaceBetween: 0,
-  slidesPerView: 4.3,
-};
-
-const Slider = ({ posts, option = defaultOptions }) => {
+const Slider = ({ posts }) => {
   return (
-    <div className="swiperContainer">
+    <div>
       <Swiper
-        spaceBetween={option.spaceBetween}
-        slidesPerView={option.slidesPerView}
-        pagination={{ clickable: true }}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          500: {
+            slidesPerView: 2.5,
+            spaceBetween: 0,
+          },
+          640: {
+            slidesPerView: 3.5,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 4.5,
+            spaceBetween: 0,
+          },
+          1024: {
+            slidesPerView: 4.5,
+            spaceBetween: 0,
+          },
+        }}
         modules={[Navigation]}
         className="mySwiper"
       >

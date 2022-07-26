@@ -218,7 +218,7 @@ ol {
   .posts {
     grid-template-columns: 1fr;
   }
-  .img {
+  /* .img {
     display: flex;
     margin: auto;
     padding-top: 20px;
@@ -227,7 +227,7 @@ ol {
   }
   .image-container {
     background: steelblue;
-  }
+  } */
   .image-in-post {
     max-width: 200px;
     max-height: 400px;
