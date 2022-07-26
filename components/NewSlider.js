@@ -20,6 +20,10 @@ const NewSlider = ({ news }) => {
           clickable: true,
         }}
         breakpoints={{
+          300: {
+            slidesPerView: 1.5,
+            spaceBetween: 0,
+          },
           500: {
             slidesPerView: 2.5,
             spaceBetween: 0,

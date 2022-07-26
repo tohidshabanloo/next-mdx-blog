@@ -15,6 +15,14 @@ const Slider = ({ posts }) => {
           clickable: true,
         }}
         breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          300: {
+            slidesPerView: 1.5,
+            spaceBetween: 0,
+          },
           500: {
             slidesPerView: 2.5,
             spaceBetween: 0,
