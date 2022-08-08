@@ -22,8 +22,9 @@ export default function Home({ posts, news }) {
         <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <div className="favorites">
         <h2>جدیدترین ها</h2>
+      <div className="favorites">
+          <span>asas</span>
         <div className="slider">
           <Slider news={news} posts={posts} />
         </div>
