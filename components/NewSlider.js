@@ -22,27 +22,27 @@ const NewSlider = ({ news }) => {
         breakpoints={{
           0: {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 8,
           },
           300: {
             slidesPerView: 1.5,
-            spaceBetween: 0,
+            spaceBetween: 8,
           },
           500: {
             slidesPerView: 2.5,
-            spaceBetween: 0,
+            spaceBetween: 8,
           },
           640: {
             slidesPerView: 3.5,
-            spaceBetween: 0,
+            spaceBetween: 8,
           },
           768: {
             slidesPerView: 4.5,
-            spaceBetween: 0,
+            spaceBetween: 8,
           },
           1024: {
-            slidesPerView: 4.5,
-            spaceBetween: 0,
+            slidesPerView: 3.2,
+            spaceBetween: 8,
           },
         }}
         modules={[Navigation]}
