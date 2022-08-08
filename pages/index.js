@@ -61,7 +61,7 @@ export default function Home({ posts, news }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   //Get files from the posts dir
   const files = fs.readdirSync(path.join("posts"));
   const newFiles = fs.readdirSync(path.join("news"));
