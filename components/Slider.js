@@ -36,7 +36,7 @@ const Slider = ({ posts }) => {
             spaceBetween: 8,
           },
           1024: {
-            slidesPerView: 4.5,
+            slidesPerView: 3.5,
             spaceBetween: 8,
           },
         }}
