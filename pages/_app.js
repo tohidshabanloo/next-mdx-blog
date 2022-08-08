@@ -43,7 +43,7 @@ export default function App(props) {
   );
 }
 
-App.getInitialProps = ({ ctx }) => ({
+App.getServerSideProps = ({ ctx }) => ({
   colorScheme: getCookie("switcher-color", ctx) || "n ",
 });
 
